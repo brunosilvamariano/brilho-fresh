@@ -1,0 +1,312 @@
+:root {
+    --cor-primaria: #3498db; /* Azul vibrante */
+    --cor-secundaria: #2ecc71; /* Verde fresco */
+    --cor-fundo: #ffffff; /* Branco */
+    --cor-menu: #f1f1f1; /* Cor do fundo da seção de menu */
+    --cor-texto-principal: #333333; /* Cinza escuro */
+    --cor-texto-secundario: #7f8c8d; /* Cinza médio */
+    --cor-hover: #2980b9; /* Azul mais escuro para hover */
+    --cor-erro: #e74c3c; /* Vermelho para mensagens de erro */
+    --cor-sucesso: #2ecc71; /* Verde para mensagens de sucesso */
+    --cor-gelo-1: #add8e6; /* Azul claro */
+    --cor-gelo-2: #00ced1; /* Ciano */
+}
+
+* {
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+}
+
+body {
+    padding-top: 0px; /* Ajuste para header fixo */
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 87.5%; /* Base de 14px */
+    font-family: Poppins, sans-serif;
+}
+
+/* Compensação do scroll para a altura do cabeçalho */
+section {
+    scroll-margin-top: 80px; /* Ajuste este valor conforme a altura do cabeçalho */
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 60px; /* Ajuste menor para dispositivos móveis */
+    }
+}
+
+/* Exemplo de conteúdo principal com padding para compensar o header fixo */
+.main-content {
+    padding-top: 100px; /* Ajuste conforme a altura do header */
+}
+
+/* CSS Adicional */
+header {
+    background: var(--cor-fundo);
+}
+
+.color-text{
+    color: var(--cor-texto-principal)
+}
+
+.nav-item span{
+    color: var(--cor-primaria);
+}
+
+.nav-item a:hover{
+    color: var(--cor-primaria)!important;
+}
+
+.btn{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Estilo do menu em dispositivos móveis (opcional) */
+/* Estilo para a seção de serviços */
+#services {
+    position: relative;
+    padding: 60px 0; /* Ajuste para o padding conforme necessário */
+    background-image: url('../images/banner-service.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Cobre toda a área da seção */
+    background-position: center bottom; /* Mantém a imagem alinhada na parte inferior */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+/* Sobreposição para melhorar a legibilidade do texto */
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Coloca abaixo do conteúdo */
+}
+
+/* Z-index para o conteúdo da seção */
+#services .container {
+    position: relative;
+    z-index: 1; /* Faz com que o conteúdo fique acima da sobreposição */
+}
+
+/* Imagens das abas */
+img {
+    max-width: 100%; /* Garante que as imagens sejam responsivas */
+    height: auto; /* Mantém a proporção das imagens */
+}
+
+#planos {
+    background-color: var(--cor-fundo); /* Fundo branco ou sua cor definida */
+    position: relative;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-size: 1.25rem;
+    border-bottom: none; /* Remove a borda padrão do Bootstrap */
+}
+
+.card-body {
+    padding: 2rem; /* Mais espaço no corpo do cartão */
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 25px; /* Bordas arredondadas */
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    filter: brightness(0.9); /* Escurecer ao passar o mouse */
+}
+
+/* Abas - estilo personalizado com variáveis */
+.nav-link1 {
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-texto-secundario); /* Fundo padrão */
+    border: 1px solid var(--cor-texto-secundario); /* Borda com cor primária */
+    margin-bottom: 5px; /* Espaço entre as abas */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.nav-link1.active {
+    background-color: var(--cor-primaria); /* Fundo para aba ativa */
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-fundo); /* Texto em contraste */
+}
+
+/* Estilo para a seção "Sobre" */
+#about {
+    background-color: var(--cor-gelo-1);
+}
+
+#about h2 {
+    color: var(--cor-primaria);
+}
+
+.about-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.about-image-wrapper img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+}
+
+.about-image-wrapper:hover img {
+    transform: scale(1.05); /* Zoom suave ao passar o mouse */
+}
+
+.about-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#about ul {
+    padding-left: 0;
+}
+
+#about li i {
+    color: var(--cor-primaria);
+}
+
+#about p, #about li p {
+    color: var(--cor-texto-principal);
+}
+
+#faq {
+    background-color: var(--cor-fundo);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--cor-gelo-1);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.faq-button {
+    width: 100%;
+    background-color: transparent;
+    color: var(--cor-texto-principal);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: color 0.3s;
+}
+
+.faq-button i {
+    margin-right: 10px;
+    color: var(--cor-primaria);
+    font-size: 1.4rem;
+}
+
+.faq-button:hover {
+    color: var(--cor-primaria);
+}
+
+.faq-content {
+    display: none;
+    padding-top: 10px;
+    color: var(--cor-texto-secundario);
+    font-size: 1rem;
+}
+
+.faq-item.active .faq-content {
+    display: block;
+}
+
+footer {
+    position: relative;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden; /* Para cantos arredondados do mapa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contact-info address {
+    font-style: normal;
+}
+
+.btn {
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.banner-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    list-style: none;
+    text-decoration: none;
+}
+
+.whatsapp-button:hover {
+    background-color: var(--cor-hover);
+    transform: scale(1.01);
+}
+
+/* Estilo do botão de Voltar ao Topo */
+.back-to-top {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.back-to-top:hover {
+    background-color: var(--cor-hover);
+    transform: scale(1.1);
+}

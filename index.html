@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brilho Fresh Lavanderia</title>
+
+    <!-- Link para o CSS do Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Link para seu CSS personalizado, se houver -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    
+    <!-- Cabeçalho fixo com barra de navegação -->
+    <header class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html" aria-label="Página inicial">
+                <img src="assets/images/logo-fresh.png" alt="Logo da empresa Brilho Fresh Lavanderia" class="logo">
+            </a>
+
+            <!-- Botão do menu mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu de navegação principal -->
+            <nav class="collapse navbar-collapse" id="navbarNav" aria-label="Navegação principal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link me-2 fw-medium fs-6" href="#home"><span>Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-2 fw-medium fs-6" href="#services">Nossos Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-2 fw-medium fs-6" href="#planos">Planos e Preços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-2 fw-medium fs-6" href="#about">Quem Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-2 fw-medium fs-6" href="#contact">Fale Conosco</a>
+                    </li>
+                    <!-- Botão do WhatsApp com aria-label -->
+                    <li>
+                        <a href="https://wa.me/47999999587?text=Olá!%20Estou%20interessado%20nos%20serviços%20de%20lavanderia." 
+                        target="_blank" 
+                        class="btn btn-outline-success align-items-center" 
+                        aria-label="Contato pelo WhatsApp (47) 99999-9587">
+                            <i class="bi bi-telephone-forward-fill me-2"></i> (47) 99159-9856
+                        </a>                      
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Conteúdo Principal da Página -->
+    <main class="main-content">
+
+        <!-- Seção de Introdução - Home -->
+        <section id="home" class="d-flex align-items-center py-5">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- Coluna de Conteúdo (Texto) -->
+                    <article class="col-lg-6 d-flex flex-column justify-content-center">
+                        <!-- Título Principal da Seção -->
+                        <h1 class="display-4 fw-bold color-text">Cuidamos das Suas Roupas com Excelência</h1>
+                        
+                        <!-- Parágrafo introdutório -->
+                        <p class="mt-3 text-secondary">
+                            Sua roupa cuidada com carinho! Oferecemos serviços completos de lavanderia para tornar seu dia mais prático e suas roupas sempre impecáveis. Conheça nossos planos e descubra como podemos facilitar a sua vida.
+                        </p>
+                        
+                        <div class="btn-home">
+                            <!-- Botão de Contato via WhatsApp -->
+                            <a href="https://wa.me/47999999587?text=Olá!%20Estou%20interessado%20nos%20serviços%20de%20lavanderia." 
+                            target="_blank" 
+                            class="btn btn-outline-success align-items-center" 
+                            aria-label="Contato pelo WhatsApp (47) 99999-9587">
+                                <i class="bi bi-whatsapp me-1"></i> Quero Solicitar um Orçcamento
+                            </a> 
+                        </div>
+                    
+                    </article>
+                    <!-- Fim da Coluna de Conteúdo -->
+
+                    <!-- Coluna de Imagem -->
+                    <aside class="col-lg-6 d-flex justify-content-center">
+                        <img src="assets/images/home-aside.png" alt="Imagem de lavanderia" class="img-fluid rounded">
+                    </aside>
+                    <!-- Fim da Coluna de Imagem -->
+
+                </div>
+            </div>
+        </section>
+        <!-- Fim da Seção de Introdução -->
+       <!-- Seção Nossos Serviços com Abas Laterais -->
+        <section id="services" class="py-5 position-relative">
+            <!-- Sobreposição para melhorar a legibilidade do texto -->
+            <div class="service-overlay"></div>
+
+            <div class="container position-relative z-index-1">
+                <!-- Título da Seção -->
+                <header class="text-center mb-5 bg-transparent">
+                    <h2 class="fw-bold display-6 fs-2" style="color: #333333;">Nossos Serviços</h2>
+                </header>
+                
+                <div class="row">
+                    <!-- Abas Laterais -->
+                    <nav class="col-md-4" aria-label="Navegação de serviços">
+                        <div class="nav flex-column nav-pills" id="serviceTabs" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link1 active" id="lavagem-tab" data-bs-toggle="pill" data-bs-target="#lavagem" type="button" role="tab" aria-controls="lavagem" aria-selected="true">
+                                Lavagem de Roupa Comum 
+                            </button>
+                            <button class="nav-link1" id="seco-tab" data-bs-toggle="pill" data-bs-target="#seco" type="button" role="tab" aria-controls="seco" aria-selected="false">
+                                Lavagem a Seco
+                            </button>
+                            <button class="nav-link1" id="passadoria-tab" data-bs-toggle="pill" data-bs-target="#passadoria" type="button" role="tab" aria-controls="passadoria" aria-selected="false">
+                                Passadoria
+                            </button>
+                            <button class="nav-link1" id="delivery-tab" data-bs-toggle="pill" data-bs-target="#delivery" type="button" role="tab" aria-controls="delivery" aria-selected="false">
+                                Serviço de Coleta e Entrega
+                            </button>
+                        </div>
+                    </nav>
+
+                    <!-- Conteúdo das Abas -->
+                    <div class="col-md-8">
+                        <div class="tab-content" id="serviceTabsContent">
+                            <!-- Conteúdo: Lavagem de Roupa Comum -->
+                            <article class="tab-pane fade show active" id="lavagem" role="tabpanel" aria-labelledby="lavagem-tab">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
+                                    <img src="assets/images/1.png" alt="Imagem ilustrativa de Lavagem Comum" class="img-fluid mb-3 mb-md-0 me-md-3">
+                                    <div>
+                                        <h3 class="fw-bold">Lavagem de Roupa Comum</h3>
+                                        <p class="text-muted">Cuidado especial para suas roupas do dia a dia, com lavagem e secagem profissional que garantem roupas limpas e frescas.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Conteúdo: Lavagem a Seco -->
+                            <article class="tab-pane fade" id="seco" role="tabpanel" aria-labelledby="seco-tab">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
+                                    <img src="assets/images/2.png" alt="Imagem ilustrativa de Lavagem a Seco" class="img-fluid mb-3 mb-md-0 me-md-3">
+                                    <div>
+                                        <h3 class="fw-bold">Lavagem a Seco</h3>
+                                        <p class="text-muted">Ideal para peças delicadas, nossa lavagem a seco preserva a qualidade do tecido, removendo manchas com cuidado especializado.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Conteúdo: Passadoria -->
+                            <article class="tab-pane fade" id="passadoria" role="tabpanel" aria-labelledby="passadoria-tab">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
+                                    <img src="assets/images/3.png" alt="Imagem ilustrativa de Passadoria" class="img-fluid mb-3 mb-md-0 me-md-3">
+                                    <div>
+                                        <h3 class="fw-bold">Passadoria</h3>
+                                        <p class="text-muted">Deixe suas roupas impecáveis com nosso serviço de passadoria, que garante alta qualidade e um acabamento perfeito para cada peça.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Conteúdo: Coleta e Entrega -->
+                            <article class="tab-pane fade" id="delivery" role="tabpanel" aria-labelledby="delivery-tab">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
+                                    <img src="assets/images/2.png" alt="Imagem ilustrativa de Coleta e Entrega" class="img-fluid mb-3 mb-md-0 me-md-3">
+                                    <div>
+                                        <h3 class="fw-bold">Serviço de Coleta e Entrega</h3>
+                                        <p class="text-muted">Para maior comodidade, oferecemos um serviço de coleta e entrega. Suas roupas vão e voltam com cuidado e pontualidade.</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Nossos Planos -->
+        <section id="planos" class="py-5" aria-labelledby="planos-title">
+            <div class="container">
+                <h2 id="planos-title" class="text-center fw-bold mb-4">Nossos Planos</h2>
+                <p class="text-center mb-5">Escolha o plano que melhor se adapta às suas necessidades e aproveite nossos serviços de lavanderia com qualidade e praticidade.</p>
+                <div class="row">
+                    <!-- Plano Básico -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card border-primary text-center">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="fw-bold">Plano Básico</h5>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="display-4 text-success">R$49,00</h2>
+                                <p>Inclui lavagem de até 10 kg de roupas.</p>
+                                <ul class="list-unstyled">
+                                    <li>Lavagem padrão</li>
+                                    <li>Secagem ao ar</li>
+                                    <li>Entrega em 48 horas</li>
+                                </ul>
+                                <a href="https://wa.me/47999999587?text=Olá!%20Estou%20interessado%20nos%20serviços%20de%20lavanderia." 
+                                target="_blank" 
+                                class="btn btn-primary align-items-center" 
+                                aria-label="Contato pelo WhatsApp (47) 99999-9587">
+                                    <i class="bi bi-arrow-90deg-right me-2"></i> Escolher Plano
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Plano Padrão -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card border-success text-center">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="fw-bold">Plano Padrão</h5>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="display-4 text-success">R$79,00</h2>
+                                <p>Inclui lavagem de até 20 kg de roupas.</p>
+                                <ul class="list-unstyled">
+                                    <li>Lavagem padrão</li>
+                                    <li>Secagem ao ar e máquina</li>
+                                    <li>Entrega em 24 horas</li>
+                                </ul>
+                                <a href="https://wa.me/47999999587?text=Olá!%20Estou%20interessado%20nos%20serviços%20de%20lavanderia." 
+                                target="_blank" 
+                                class="btn btn-success align-items-center" 
+                                aria-label="Contato pelo WhatsApp (47) 99999-9587">
+                                    <i class="bi bi-arrow-90deg-right me-2"></i> Escolher Plano
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Plano Premium -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card border-info text-center">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="fw-bold">Plano Premium</h5>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="display-4 text-success">R$109,00</h2>
+                                <p>Inclui lavagem de roupas ilimitadas.</p>
+                                <ul class="list-unstyled">
+                                    <li>Lavagem padrão e a seco</li>
+                                    <li>Secagem ao ar e máquina</li>
+                                    <li>Entrega em 12 horas</li>
+                                </ul>
+                                <a href="https://wa.me/47999999587?text=Olá!%20Estou%20interessado%20nos%20serviços%20de%20lavanderia." 
+                                target="_blank" 
+                                class="btn btn-info align-items-center" 
+                                aria-label="Contato pelo WhatsApp (47) 99999-9587">
+                                    <i class="bi bi-arrow-90deg-right me-2"></i> Escolher Plano
+                                </a>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Sobre -->
+        <section id="about" class="py-5 bg-light position-relative">
+            <div class="container">
+                <!-- Cabeçalho da seção -->
+                <header class="text-center mb-5">
+                    <h2 class="display-6 fw-bold fs-2" style="color: #333333;" >Sobre a Brilho Fresh Lavanderia</h2>
+                    <p class="text-muted fs-5">Conheça nossa história e o compromisso com a qualidade e o cuidado com suas roupas.</p>
+                </header>
+        
+                <div class="row align-items-center">
+                    <!-- Coluna de Imagem -->
+                    <figure class="col-md-6">
+                        <div class="about-image-wrapper position-relative">
+                            <img src="assets/images/banner-lateral.png" alt="Equipe da Brilho Fresh Lavanderia" class="img-fluid rounded">
+                            <div class="about-image-overlay"></div>
+                        </div>
+                        <figcaption class="text-muted mt-2">Imagem representativa de nossa equipe</figcaption>
+                    </figure>
+        
+                    <!-- Coluna de Texto -->
+                    <div class="col-md-6">
+                        <p class="text-muted mb-4">
+                            Na <strong>Brilho Fresh Lavanderia</strong>, dedicamo-nos a fornecer um serviço de lavanderia de alta qualidade que respeita o tecido e as necessidades de cada cliente. 
+                            Com anos de experiência, nossa equipe está comprometida em oferecer um atendimento cuidadoso e resultados impecáveis.
+                        </p>
+                        <!-- Lista de Benefícios -->
+                        <ul class="list-unstyled" aria-label="Benefícios de nossos serviços">
+                            <li class="d-flex align-items-center mb-3">
+                                <span class="icon" aria-hidden="true">
+                                    <i class="bi bi-patch-check-fill text-primary me-3 fs-4"></i>
+                                </span>
+                                <p class="mb-0">Equipe experiente e qualificada</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <span class="icon" aria-hidden="true">
+                                    <i class="bi bi-patch-check-fill text-primary me-3 fs-4"></i>
+                                </span>
+                                <p class="mb-0">Soluções personalizadas para cada peça</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <span class="icon" aria-hidden="true">
+                                    <i class="bi bi-patch-check-fill text-primary me-3 fs-4"></i>
+                                </span>
+                                <p class="mb-0">Atendimento rápido e eficiente</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção de Perguntas Frequentes -->
+        <section id="faq" class="py-5" aria-labelledby="faq-heading">
+            <div class="container">
+                <!-- Título da Seção -->
+                <header class="text-center mb-5">
+                    <h2 id="faq-heading" class="display-6 fw-bold fs-2" style="color: #333333;">Perguntas Frequentes</h2>
+                    <p class="text-muted fs-5">Esclareça suas dúvidas sobre nossos serviços de lavanderia.</p>
+                </header>
+
+                <div class="row">
+                    <!-- Coluna Esquerda -->
+                    <div class="col-md-6">
+                        <article class="faq-item">
+                            <header class="faq-header">
+                                <button class="faq-button" type="button">
+                                    <i class="bi bi-question-circle-fill me-2 text-primary"></i>
+                                    Quais serviços vocês oferecem?
+                                </button>
+                            </header>
+                            <div class="faq-content">
+                                <p>Oferecemos uma ampla gama de serviços, incluindo lavagem de roupas comuns, lavagem a seco, passadoria e serviços de coleta e entrega.</p>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <header class="faq-header">
+                                <button class="faq-button" type="button">
+                                    <i class="bi bi-question-circle-fill me-2 text-primary"></i>
+                                    Como agendar uma coleta de roupas?
+                                </button>
+                            </header>
+                            <div class="faq-content">
+                                <p>Você pode agendar a coleta de roupas através de nosso WhatsApp ou telefone. Nossos atendentes estão prontos para ajudar.</p>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <header class="faq-header">
+                                <button class="faq-button" type="button">
+                                    <i class="bi bi-question-circle-fill me-2 text-primary"></i>
+                                    Vocês atendem minha região?
+                                </button>
+                            </header>
+                            <div class="faq-content">
+                                <p>Atendemos diversas áreas da cidade e arredores. Consulte nossa equipe para confirmar o atendimento na sua região.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Coluna Direita -->
+                    <div class="col-md-6">
+                        <article class="faq-item">
+                            <header class="faq-header">
+                                <button class="faq-button" type="button">
+                                    <i class="bi bi-question-circle-fill me-2 text-primary"></i>
+                                    Qual é o tempo médio de entrega?
+                                </button>
+                            </header>
+                            <div class="faq-content">
+                                <p>Nossos serviços variam conforme o tipo e volume das peças, mas buscamos sempre garantir a entrega rápida e pontual.</p>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <header class="faq-header">
+                                <button class="faq-button" type="button">
+                                    <i class="bi bi-question-circle-fill me-2 text-primary"></i>
+                                    Como cuidar de peças delicadas?
+                                </button>
+                            </header>
+                            <div class="faq-content">
+                                <p>Temos cuidados específicos para peças delicadas, oferecendo serviços especializados que preservam a qualidade e integridade do tecido.</p>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <header class="faq-header">
+                                <button class="faq-button" type="button">
+                                    <i class="bi bi-question-circle-fill me-2 text-primary"></i>
+                                    Existe garantia para os serviços prestados?
+                                </button>
+                            </header>
+                            <div class="faq-content">
+                                <p>Sim, oferecemos garantia de qualidade em todos os nossos serviços. Caso algo não saia conforme o esperado, entre em contato.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark text-light py-5">
+        <div class="container">
+            <!-- Título e Descrição -->
+            <header class="text-center mb-4">
+                <h3 class="display-6 text-primary">Fale Conosco</h3>
+                <p class="text-muted">Estamos prontos para ajudar! Entre em contato conosco através das opções abaixo.</p>
+            </header>
+    
+            <div class="row">
+                <!-- Coluna do Mapa e Informações de Contato -->
+                <div class="col-md-6 mb-4">
+                    <div class="map-container mb-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" aria-label="Mapa da localização"></iframe>
+                    </div>
+                    <div class="contact-info mb-3">
+                        <address class="text-light">
+                            <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                            Rua Exemplo, 123, Centro, Cidade, Estado
+                        </address>
+                        <a href="https://wa.me/47999999587" class="btn btn-outline-success mb-2" target="_blank" aria-label="Contato via WhatsApp">
+                            <i class="bi bi-whatsapp me-2"></i> WhatsApp
+                        </a>
+                        <a href="https://instagram.com/suaempresa" class="btn btn-outline-light" target="_blank" aria-label="Instagram">
+                            <i class="bi bi-instagram me-2"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Coluna de Banner e Informação -->
+                <div class="col-md-6 text-center">
+                    <div class="banner-container mb-3">
+                        <img src="assets/images/footer-banner.jpg" alt="Banner da empresa" class="img-fluid rounded" width="100%">
+                    </div>
+                    <p class="small mb-1">"Transformamos cuidado em cada peça"</p>
+                    <p class="small text-muted">Copy & Desenvolvido por Bruno Mariano</p>
+                </div>
+            </div>
+    
+            <!-- Botão de WhatsApp Fixo -->
+            <a href="https://wa.me/47999999587?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20lavanderia." 
+               target="_blank" 
+               class="whatsapp-button" 
+               aria-label="Entre em contato via WhatsApp">
+                <i class="bi bi-whatsapp"></i> Entre em Contato
+            </a>
+    
+            <!-- Botão de Voltar ao Topo -->
+            <a href="#home" class="back-to-top" aria-label="Voltar para o topo">
+                <i class="bi bi-arrow-up-circle"></i>
+            </a>
+        </div>
+    </footer>
+    
+
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Faz a rolagem ser suave
+            });
+        }
+    </script>
+    <!-- Scripts JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Para jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Para Popper.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <!-- JS do Bootstrap -->
+    
+    <!-- Link para seu JavaScript personalizado, se houver -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/faq.js"></script>
+</body>
+</html>
